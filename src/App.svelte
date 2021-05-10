@@ -1,30 +1,49 @@
 <script>
-	export let name;
+  import DataView from "./Comps/DataView.svelte";
+  import ReliabilityView from "./Comps/Reliability.svelte";
+  let active = 0;
+  let comps = [DataView, ReliabilityView];
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <div id="navbar" class="navbar">
+    <div>
+      <button
+        class="navbarButton"
+        type="button"
+        on:click={() => {
+          active = 0;
+        }}
+      >
+        Data
+      </button>
+    </div>
+    <div>
+      <button
+        class="navbarButton"
+        type="button"
+        on:click={() => {
+          active = 1;
+        }}
+      >
+        Reliability
+      </button>
+    </div>
+    <div>
+      <button class="navbarButton" type="button" on:click>
+        PlaceHolder
+      </button>
+    </div>
+    <div>
+      <button class="navbarButton" type="button" on:click>
+        PlaceHolder
+      </button>
+    </div>
+  </div>
+  <div id="body" class="body">
+    {active}
+    <svelte:component this={comps[active]} />
+  </div>
 </main>
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+<style></style>
