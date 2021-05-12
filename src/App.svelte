@@ -1,9 +1,17 @@
 <script>
   import DataView from "./Comps/DataView.svelte";
   import ReliabilityView from "./Comps/Reliability.svelte";
+  import DataPresentation from "./Comps/HowIsDataPresented.svelte";
+  import Sauce from "./Comps/Sauce.svelte";
   let active = 0;
-  let comps = [DataView, ReliabilityView];
+  let comps = [DataView, ReliabilityView, DataPresentation, Sauce];
 </script>
+
+<style>
+  .navbar > div{
+    display: inline-block;
+  }
+</style>
 
 <main>
   <div id="navbar" class="navbar">
@@ -13,8 +21,7 @@
         type="button"
         on:click={() => {
           active = 0;
-        }}
-      >
+        }}>
         Data
       </button>
     </div>
@@ -24,26 +31,32 @@
         type="button"
         on:click={() => {
           active = 1;
-        }}
-      >
+        }}>
         Reliability
       </button>
     </div>
     <div>
-      <button class="navbarButton" type="button" on:click>
-        PlaceHolder
+      <button
+        class="navbarButton"
+        type="button"
+        on:click={() => {
+          active = 2;
+        }}>
+        How Data is Presented
       </button>
     </div>
     <div>
-      <button class="navbarButton" type="button" on:click>
-        PlaceHolder
+      <button
+        class="navbarButton"
+        type="button"
+        on:click={() => {
+          active = 3;
+        }}>
+        Sources
       </button>
     </div>
   </div>
   <div id="body" class="body">
-    {active}
     <svelte:component this={comps[active]} />
   </div>
 </main>
-
-<style></style>
