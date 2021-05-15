@@ -444,7 +444,7 @@
         ],
         datasets: [
           {
-            label: "Temperature over time",
+            label: "Co2 over time",
             fill: false,
             data: [
               333.94, 336.51, 338.28, 340.01, 340.83, 341.71, 342.88,
@@ -558,13 +558,26 @@
   .h1 {
     color: #4472c4;
     text-transform: uppercase;
-    font-size: 4em;
+    font-size: 2em;
     font-weight: 100;
   }
 
   @media (min-width: 640px) {
     article {
       max-width: none;
+    }
+
+    .h1 {
+      font-size: 4em;
+    }
+  }
+
+  @media (max-width: 640px) {
+    article {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      max-width: unset;
     }
   }
 

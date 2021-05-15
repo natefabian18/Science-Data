@@ -63,4 +63,15 @@
   .navbar > div {
     display: inline-block;
   }
+
+  @media (max-width: 640px) {
+    .navbar > div {
+      display: block;
+      width: 100%;
+    }
+
+    .navbar > div > button {
+      width: 100%;
+    }
+  }
 </style>

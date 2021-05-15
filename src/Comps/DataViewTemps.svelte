@@ -216,13 +216,26 @@
   .h1 {
     color: #4472c4;
     text-transform: uppercase;
-    font-size: 4em;
+    font-size: 2em;
     font-weight: 100;
   }
 
   @media (min-width: 640px) {
     article {
       max-width: none;
+    }
+
+    .h1 {
+      font-size: 4em;
+    }
+  }
+
+  @media (max-width: 640px) {
+    article {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      max-width: unset;
     }
   }
 
