@@ -1,17 +1,19 @@
 <script>
-  let name = "Reliability";
+  let name = "Is this data reliable?";
 </script>
 
-<main>
-  <h1>Hello {name}!</h1>
+<article>
+  <h1>{name}!</h1>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a
-    > to learn how to build Svelte apps.
+    These are all academic and/or government resources listed in the
+    previous slide​
   </p>
-</main>
+  <p>Odds are, these guys are telling us the truth​</p>
+  <p>A government would never lie to its people….right?</p>
+</article>
 
 <style>
-  main {
+  article {
     text-align: center;
     padding: 1em;
     max-width: 240px;
@@ -19,14 +21,14 @@
   }
 
   h1 {
-    color: #ff3e00;
+    color: #4472c4;
     text-transform: uppercase;
     font-size: 4em;
     font-weight: 100;
   }
 
   @media (min-width: 640px) {
-    main {
+    article {
       max-width: none;
     }
   }
