@@ -1,9 +1,8 @@
 <script>
-  let name = "Sources";
 </script>
 
 <article>
-  <h1>{name}!</h1>
+  <h1>Sources!</h1>
   <div class="linkHolder">
     <a href="https://libguides.depaul.edu/c.php?g=253564&p=1690343​">
       www.libguides.depaul.edu
